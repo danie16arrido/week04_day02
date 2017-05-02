@@ -1,0 +1,22 @@
+<h2>Edit Pizza Details</h2>
+<section>
+<form action="/pizzas/<%= @pizza.id %>/edit" method="POST">
+  <!-- <label for="first-name-field">First Name:</label> -->
+  <input id="id-field" name="id" type="hidden" value="<%= @pizza.id %>"/>
+  <input id="first-name-field" name="first_name" type="hidden" value="<%= @pizza.first_name %>"/>
+  <!-- <label for="last-name-field">First Name:</label> -->
+  <input id="last-name-field" name="last_name" type="hidden"value="<%= @pizza.last_name %>"/>
+
+  <label for="pizza-select">Select your new pizza:</label>
+  <select id="pizza-select" name="topping">
+    <option selected="selected"><%= @pizza.topping %></option>
+    <option value="Margherita">Margherita</option>
+    <option value="Pepperoni">Pepperoni</option>
+  </select>
+
+  <label for="quantity">How many you want?<label>
+    <input type"number" id="quantity" name="quantity" placeholder="<%= @pizza.quantity %>"/>
+
+    <input type="submit" value="Confirm changes to your Pizza"/>
+</form>
+</section>

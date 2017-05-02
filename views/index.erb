@@ -1,0 +1,13 @@
+<h2>All orders</h2>
+
+<section>
+<dl class="faq">
+<% @pizzas.each() do |pizza| %>
+	<dt>Name: <%= pizza.pretty_name %></dt>
+	 <dd>Order: <%= pizza.quantity %> x <%= pizza.topping %></dd>
+   <dd><a href="/pizzas/<%= pizza.id %>">Show Order</a></dd>
+   <dd><a href="/pizzas/<%= pizza.id %>/edit">Edit Order</a></dd>
+   <dd><a href="/pizzas/<%= pizza.id %>/delete">Delete Order</a></dd>
+<% end %>
+</dl>
+</section>

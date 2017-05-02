@@ -1,0 +1,10 @@
+<h2>Delete Pizza</h2>
+<section>
+<p><%= @pizza_delete.first_name.capitalize %>, are you sure you want to delete</p>
+<p>your <%= @pizza_delete.topping %> pizza?</p>
+<form action="/pizzas/<%= @pizza_delete.id %>/delete" method="POST">
+<input name="id" type="hidden" value="delete" />
+<input type="submit" name="ok" value="Delete">
+<!-- <input type="reset" name="cancel" value="cancel"> -->
+</form>
+</section>

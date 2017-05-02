@@ -1,0 +1,57 @@
+.faq {
+	counter-reset: my-badass-counter;
+}
+.faq dt {
+	position: relative;
+	font: bold 16px Georgia;
+	padding: 4px 0 10px 0;
+}
+.faq dt:before {
+	content: counter(my-badass-counter);
+	counter-increment: my-badass-counter;
+	position: absolute;
+	left: 0;
+	top: 0;
+	font: bold 50px/1 Sans-Serif;
+}
+.faq dd {
+	margin: 0 0 10px 0;
+}
+.faq dt, .faq dd {
+	padding-left: 50px;
+}
+
+a {
+  transition: color .4s;
+  color: #265C83;
+}
+
+a:link,
+a:visited { color: #265C83; }
+a:hover   { color: #7FDBFF; }
+a:active  {
+  transition: color .3s;
+  color: #007BE6;
+}
+
+.link { text-decoration: none;}
+body {
+    width: 80%;
+    margin: auto;
+    border: 1px dashed black;
+		padding: 2em;
+}
+
+
+section {
+  margin-bottom: 60px;
+  padding: 30px;
+  background-color: #efefef;
+}
+aside {
+  margin-bottom: 60px;
+  padding: 30px;
+  background-color: #efefef;
+}
+input[type=submit] {font-size: 20;padding:5px 15px; background:#cccfff; border:0 none;
+    cursor:pointer;}
